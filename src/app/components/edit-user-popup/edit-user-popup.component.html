@@ -1,0 +1,103 @@
+<div class="popup-overlay" *ngIf="openEditPopup">
+  <div class="popup">
+    <h2>Edit User</h2>
+
+    <form [formGroup]="editForm" (ngSubmit)="saveUser()">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" formControlName="name" />
+
+        <div
+          class="error"
+          *ngIf="editForm.get('name')?.invalid && editForm.get('name')?.touched"
+        >
+          <small *ngIf="editForm.get('name')?.errors?.['required']">
+            Name is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Status</label>
+        <input type="text" formControlName="status" />
+
+        <div
+          class="error"
+          *ngIf="
+            editForm.get('status')?.invalid && editForm.get('status')?.touched
+          "
+        >
+          <small *ngIf="editForm.get('status')?.errors?.['required']">
+            Status is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Capital</label>
+        <input type="text" formControlName="capital" />
+
+        <div
+          class="error"
+          *ngIf="
+            editForm.get('capital')?.invalid && editForm.get('capital')?.touched
+          "
+        >
+          <small *ngIf="editForm.get('capital')?.errors?.['required']">
+            Capital is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Currency Name</label>
+        <select formControlName="currencyCode">
+          <option
+            *ngFor="let currency of currencies | keyvalue"
+            [value]="currency.key"
+          >
+            {{ currency.value }}
+          </option>
+        </select>
+
+        <div
+          class="error"
+          *ngIf="
+            editForm.get('currencyCode')?.invalid &&
+            editForm.get('currencyCode')?.touched
+          "
+        >
+          <small *ngIf="editForm.get('currencyCode')?.errors?.['required']">
+            Currency name is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Currency Symbol</label>
+        <input type="text" formControlName="currencySymbol" />
+
+        <div
+          class="error"
+          *ngIf="
+            editForm.get('currencySymbol')?.invalid &&
+            editForm.get('currencySymbol')?.touched
+          "
+        >
+          <small *ngIf="editForm.get('currencySymbol')?.errors?.['required']">
+            Symbol is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="cancel-btn" (click)="closePopup()">
+          Cancel
+        </button>
+        <button type="submit" class="save-btn" [disabled]="editForm.invalid">
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

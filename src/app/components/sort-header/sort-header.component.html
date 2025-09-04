@@ -1,0 +1,11 @@
+<div class="sort-header" (click)="onSortClick()">
+  <span>{{ label }}</span>
+  <i
+    class="ml-2 fa"
+    [ngClass]="{
+      'fa-arrow-up': activeColumn === columnKey && direction === 'asc',
+      'fa-arrow-down': activeColumn === columnKey && direction === 'desc',
+      'fa-sort': activeColumn !== columnKey || direction === ''
+    }"
+  ></i>
+</div>

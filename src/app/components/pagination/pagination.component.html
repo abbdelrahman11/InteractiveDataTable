@@ -1,0 +1,26 @@
+<div class="pagination" *ngIf="totalPages > 0">
+  <div class="items-per-page">
+    <label for="recordsPerPage">Records per page:</label>
+    <select
+      id="recordsPerPage"
+      [value]="recordsPerPage"
+      (change)="onPageSizeChange($event)"
+    >
+      <option *ngFor="let size of pageSizes" [value]="size">
+        {{ size }}
+      </option>
+    </select>
+  </div>
+
+  <div class="pagination-btns">
+    <button (click)="previousPage()" [disabled]="currentPage === 1">
+      Previous
+    </button>
+
+    <span class="page-info"> Page {{ currentPage }} of {{ totalPages }} </span>
+
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+      Next
+    </button>
+  </div>
+</div>

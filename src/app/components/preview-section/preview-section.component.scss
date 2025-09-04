@@ -1,0 +1,29 @@
+.preview-section {
+  padding: 30px;
+  padding-bottom: 60px;
+
+  .preview-card {
+    padding: 30px 18px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+      li {
+        font-size: 18px;
+        font-weight: 600;
+
+        span {
+          font-weight: 400;
+          margin-left: 8px;
+          color: #555;
+        }
+      }
+    }
+  }
+}

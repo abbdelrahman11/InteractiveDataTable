@@ -1,0 +1,22 @@
+<div class="preview-section">
+  @if (rowDetailes) {
+  <div class="preview-card">
+    <ul>
+      <li><span>Name:</span> {{ rowDetailes.name.common }}</li>
+      <li><span>Capital:</span> {{ rowDetailes.capital[0] }}</li>
+      <li>
+        <span>Currency:</span>
+        @for (currency of rowDetailes.currencies | keyvalue; track currency.key)
+        {
+        <span>
+          <span>{{ currency.key }}</span>
+          <span>Name: {{ currency.value.name }}</span>
+          <span>Symbol: {{ currency.value.symbol }}</span>
+        </span>
+        }
+      </li>
+      <li><span>Status:</span> {{ rowDetailes.status }}</li>
+    </ul>
+  </div>
+  }
+</div>
