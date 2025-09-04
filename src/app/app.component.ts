@@ -182,6 +182,8 @@ export class AppComponent {
   }
   deleteRecord(index: number) {
     this.paginatedData.splice(index, 1);
+    this.data.splice(index, 1);
+    this.updateThePaginatedData();
   }
 
   sortData(column: string): void {

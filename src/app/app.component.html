@@ -68,6 +68,7 @@
           <th></th>
         </tr>
       </thead>
+      @if(paginatedData.length ){
       <tbody>
         @for (item of paginatedData; track item.name.common; let i = $index) {
         <tr
@@ -92,6 +93,9 @@
         </tr>
         }
       </tbody>
+      } @else {
+      <p class="empty">There Is No Data</p>
+      }
     </table>
   </div>
   <app-pagination

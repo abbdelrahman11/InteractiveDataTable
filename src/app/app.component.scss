@@ -5,7 +5,6 @@
   .table-wrapper {
     border: 1px solid #ddd;
     border-radius: 8px;
-
     table {
       width: 100%;
       border-collapse: collapse;
@@ -57,4 +56,18 @@ select {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
+}
+.empty {
+  position: absolute;
+  padding: 20px;
+  right: 50%;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    width: 100vw;
+    .table-wrapper {
+      overflow-x: auto;
+    }
+  }
 }

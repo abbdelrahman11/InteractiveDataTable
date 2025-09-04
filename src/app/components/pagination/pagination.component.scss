@@ -62,3 +62,12 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .pagination {
+    margin-top: 20px;
+    flex-direction: column-reverse;
+    gap: 30px;
+    align-items: flex-start;
+  }
+}

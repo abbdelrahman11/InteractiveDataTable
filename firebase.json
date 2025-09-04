@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/interactive-data-table/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
