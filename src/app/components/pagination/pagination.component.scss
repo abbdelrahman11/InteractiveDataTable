@@ -18,7 +18,10 @@
     }
 
     select {
-      padding: 6px 10px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding: 10px 20px;
       border: 1px solid #ccc;
       border-radius: 6px;
       cursor: pointer;
