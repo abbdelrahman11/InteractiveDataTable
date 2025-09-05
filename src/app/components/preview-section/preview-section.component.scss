@@ -18,12 +18,26 @@
         font-size: 18px;
         font-weight: 600;
 
+        span:first-of-type {
+          margin-left: 0;
+        }
         span {
           font-weight: 400;
           margin-left: 8px;
           color: #555;
         }
       }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .preview-section {
+    width: 100vw;
+    padding: 12px;
+    padding-bottom: 30px;
+    ul {
+      flex-direction: column;
+      gap: 20px;
     }
   }
 }
