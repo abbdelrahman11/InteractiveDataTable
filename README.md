@@ -1,27 +1,29 @@
 # InteractiveDataTable
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.13.
+- This project is a CRUD (Create, Read, Update, Delete) web application built using Angular. It provides a responsive and dynamic data table with support for:
 
-## Development server
+- Sorting data by column
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Filtering data using column-based filters
 
-## Code scaffolding
+- Pagination for better data navigation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Search functionality
 
-## Build
+- Pop-up modals for edit operations.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Features
 
-## Running unit tests
+- Read and display data in a paginated and scrollable table.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Update records inline or through a popup modal.
 
-## Running end-to-end tests
+- Delete records.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Sort data in ascending/descending order by clicking on column headers.
 
-## Further help
+- Filter data by entering values in filter inputs in each column header.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Pagination to handle large datasets efficiently.
+
+- Search across all columns for quick lookups.
